@@ -87,14 +87,13 @@ async def execute(
         # Prepare the request body
         request_body = {
             "query": query,
+            "operationName": operation_name,
             "variables": variables,
-            # "operationName": operation_name
         }
         
         request_body_str = json.dumps(request_body).encode('utf-8')
 
         # Generate the signature based on the request body
-        print(self.secret_key)
         signature = prepare_signature(self.secret_key, request_body_str)
 
         headers: Dict[str, str] = {"Content-Type": "application/json"}

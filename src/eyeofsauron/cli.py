@@ -19,7 +19,6 @@ def generate(folder="."):
 
     # Generate queries file
     formatted_query = generate_queries(remote_schema_url)
-    print(base_path)
     queries_path = os.path.join(base_path, 'queries.graphql').replace("\\", "/")
     with open(queries_path, 'w') as file:
             file.write(formatted_query)
