@@ -17,7 +17,7 @@ gandalf-python-sdk is a command-line tool designed to generate the necessary fil
 
 ```bash
 
-pip install gandalf-python-sdk
+pip install git+https://github.com/gandalf-network/gandalf-sdk-python.git
 
 ```
 
