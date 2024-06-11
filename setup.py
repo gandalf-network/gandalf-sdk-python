@@ -7,7 +7,8 @@ setup(
     package_dir={'': 'src'},
     install_requires=[
         'ariadne-codegen',
-        'click',
+        'click'
+        'requests',
     ],
     entry_points={
         'console_scripts': [
