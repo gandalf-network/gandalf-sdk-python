@@ -41,7 +41,7 @@ Once you have successfully generated the necessary files and installed the requi
 
 ```python
 
-// Change eyeofsauron to suit the path you specified for the SDK generation
+# Change eyeofsauron to suit the path you specified for the SDK generation
 from eyeofsauron.client import Eye
 from eyeofsauron.enums import Source
 

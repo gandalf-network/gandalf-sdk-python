@@ -42,6 +42,8 @@ def generate(folder="."):
     client_name = "Eye"
     plugins = [
         "eyeofsauron.custom_client_plugin.CustomClientPlugin",
+        "eyeofsauron.replace_unset_plugin.ReplaceUnsetPlugin",
+        "ariadne_codegen.contrib.shorter_results.ShorterResultsPlugin",
     ]
     """
 

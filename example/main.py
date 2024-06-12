@@ -18,7 +18,7 @@ async def main():
         page=page,
     )
 
-    print(activity)
+    print(activity.data)
 
 # Run the main function
 asyncio.run(main())

@@ -9,6 +9,7 @@ setup(
         'ariadne-codegen',
         'click',
         'requests',
+        'ecdsa',
     ],
     entry_points={
         'console_scripts': [
