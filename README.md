@@ -44,6 +44,7 @@ Once you have successfully generated the necessary files and installed the requi
 # Change eyeofsauron to suit the path you specified for the SDK generation
 from eyeofsauron.client import Eye
 from eyeofsauron.enums import Source
+from eyeofsauron.enums import TraitLabel
 
 eye = Eye("YOUR_PRIVATE_KEY")
 ```
@@ -54,23 +55,53 @@ eye = Eye("YOUR_PRIVATE_KEY")
     import asyncio
 
     async def main():
-        eye = Eye("YOUR_PRIVATE_KEY")
-        data_key = 'YOUR_DATA_KEY'
-        source = Source.NETFLIX
-        limit = 10
-        page = 1
-
-        activity = await eye.get_activity(
-            data_key=data_key,
-            source=source,
-            limit=limit,
-            page=page,
+        activities = await eye.get_activity(
+            data_key = 'YOUR_DATA_KEY',
+            source = Source.NETFLIX,
+            limit = 10,
+            page = 1,
         )
 
-        print(activity)
+        print(activities.data)
 
-    # Run the main function
     asyncio.run(main())
+```
+
+#### Lookup Activity
+
+```python
+
+    activity = await eye.lookup_activity(
+        data_key="YOUR_DATA_KEY",
+        activity_id="ACTIVITY_ID"
+    )
+
+    print(activity)
+```
+
+#### Get Traits
+
+```python
+
+    traits = await eye.get_traits(
+        data_key="YOUR_DATA_KEY",
+        source=Source.UBER,
+        labels=[TraitLabel.RATING, TraitLabel.TRIP_COUNT, TraitLabel.ACCOUNT_CREATED_ON],
+    )
+
+    print(traits)
+```
+
+#### Lookup Trait
+
+```python
+
+    trait = await eye.lookup_trait(
+        data_key="YOUR_DATA_KEY",
+        trait_id="TRAIT_ID"
+    )
+
+    print(trait)
 ```
 
 ## Contributing
