@@ -64,6 +64,8 @@ eye = Eye("YOUR_PRIVATE_KEY")
 
         print(activities)
         """
+        Returns
+
             data = [
                 (
                     id='ACTIVITY_ID' 
@@ -107,6 +109,8 @@ eye = Eye("YOUR_PRIVATE_KEY")
 
     print(activity)
     """
+    Returns
+
         id='ACTIVITY_ID' 
         metadata=(
             typename__='NetflixActivityMetadata', 
@@ -141,15 +145,23 @@ eye = Eye("YOUR_PRIVATE_KEY")
 
     print(traits)
     """
+    Returns
+
         [ 
             (
                 id='TRAIT_ID', 
-                source=<Source.NETFLIX: 'NETFLIX'>, 
-                label=<TraitLabel.PLAN: 'PLAN'>, value='premium', 
+                source=<Source.UBER: 'UBER'>, 
+                label=<TraitLabel.RATING: 'RATING'>, value='5.0', 
                 timestamp='2024-06-11T11:41:00.552647Z', 
                 typename__='Trait',
             ),
-            ...
+            (
+                id='TRAIT_ID_2', 
+                source=<Source.UBER: 'UBER'>, 
+                label=<TraitLabel.TRIP_COUNT: 'TRIP_COUNT'>, value='84', 
+                timestamp='2024-06-11T11:41:00.552647Z', 
+                typename__='Trait',
+            ),
         ]
     """
 ```
@@ -165,10 +177,12 @@ eye = Eye("YOUR_PRIVATE_KEY")
 
     print(trait)
     """
+    Returns
+
         id='TRAIT_ID' 
-        source=<Source.NETFLIX: 'NETFLIX'> 
-        label=<TraitLabel.PLAN: 'PLAN'> 
-        value='premium' 
+        source=<Source.UBER: 'UBER'> 
+        label=<TraitLabel.RATING: 'RATING'> 
+        value='5.0' 
         timestamp='2024-06-11T11:41:00.552647Z' 
         typename__='Trait'
     """
