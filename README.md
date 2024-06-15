@@ -62,7 +62,36 @@ eye = Eye("YOUR_PRIVATE_KEY")
             page = 1,
         )
 
-        print(activities.data)
+        print(activities)
+        """
+            data = [
+                (
+                    id='ACTIVITY_ID' 
+                    metadata=(
+                        typename__='NetflixActivityMetadata', 
+                        subject=[
+                            (
+                                typename__='Identifier', 
+                                value='tt31473598', 
+                                identifier_type=<IdentifierType.IMDB: 'IMDB'>
+                            ), 
+                            (   
+                                typename__='Identifier', 
+                                value='10296096', 
+                                identifier_type=<IdentifierType.TVDB: 'TVDB'>
+                            )
+                        ], 
+                        title="Judge Dee's Mystery: Season 1: Episode 3", 
+                        last_played_at='01/01/2024'
+                    ) 
+                    typename__='Activity'
+                ), ...
+            ]
+            limit=10 
+            total=3409 
+            page=1 
+            typename__='ActivityResponse'
+        """
 
     asyncio.run(main())
 ```
@@ -77,6 +106,27 @@ eye = Eye("YOUR_PRIVATE_KEY")
     )
 
     print(activity)
+    """
+        id='ACTIVITY_ID' 
+        metadata=(
+            typename__='NetflixActivityMetadata', 
+            subject=[
+                (
+                    typename__='Identifier', 
+                    value='tt31473598', 
+                    identifier_type=<IdentifierType.IMDB: 'IMDB'>
+                ), 
+                (   
+                    typename__='Identifier', 
+                    value='10296096', 
+                    identifier_type=<IdentifierType.TVDB: 'TVDB'>
+                )
+            ], 
+            title="Judge Dee's Mystery: Season 1: Episode 3", 
+            last_played_at='01/01/2024'
+        ) 
+        typename__='Activity'
+    """
 ```
 
 #### Get Traits
@@ -90,6 +140,18 @@ eye = Eye("YOUR_PRIVATE_KEY")
     )
 
     print(traits)
+    """
+        [ 
+            (
+                id='TRAIT_ID', 
+                source=<Source.NETFLIX: 'NETFLIX'>, 
+                label=<TraitLabel.PLAN: 'PLAN'>, value='premium', 
+                timestamp='2024-06-11T11:41:00.552647Z', 
+                typename__='Trait',
+            ),
+            ...
+        ]
+    """
 ```
 
 #### Lookup Trait
@@ -102,6 +164,14 @@ eye = Eye("YOUR_PRIVATE_KEY")
     )
 
     print(trait)
+    """
+        id='TRAIT_ID' 
+        source=<Source.NETFLIX: 'NETFLIX'> 
+        label=<TraitLabel.PLAN: 'PLAN'> 
+        value='premium' 
+        timestamp='2024-06-11T11:41:00.552647Z' 
+        typename__='Trait'
+    """
 ```
 
 ## Contributing
