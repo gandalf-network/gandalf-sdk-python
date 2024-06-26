@@ -68,6 +68,8 @@ def encode_signature(signature):
             """
 def __init__(self, secret_key, *args, **kwargs):
         super().__init__(url="https://sauron.gandalf.network/public/gql", *args, **kwargs)
+        if secret_key.lower().startswith('0x'):
+            secret_key = secret_key[2:]
         self.secret_key = secret_key
 """
         )

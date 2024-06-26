@@ -31,7 +31,7 @@ def generate(folder="."):
     [project]
     name = "gandalf-eyeofsauron"
     description = "Generate fully typed GraphQL client from schema, queries and mutations!"
-    version = "0.0.1"
+    version = "0.0.2"
     readme = "README.md"
 
     [tool.ariadne-codegen]
