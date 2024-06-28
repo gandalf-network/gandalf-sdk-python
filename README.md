@@ -188,6 +188,30 @@ Returns
 """
 ```
 
+### Deployment
+
+When deploying your project that utilizes our CLI tool, it's essential to ensure that all necessary dependencies are included in your project's environment. Depending on your project setup, add these dependencies either through a requirements.txt file or using Poetry.
+
+#### requirements.txt
+
+```txt
+requirements.txt
+
+ecdsa==0.19.0
+httpx==0.27.0
+pydantic==2.7.4
+pydantic_core==2.18.4
+requests==2.28.2
+```
+
+#### poetry
+
+If you are managing your project with Poetry, execute the following command to add these dependencies to your pyproject.toml file:
+
+```shell
+poetry add ecdsa==0.19.0 httpx==0.27.0 pydantic==2.7.4 pydantic_core==2.18.4 requests==2.28.2
+```
+
 ## Contributing
 
 Contributions are welcome, whether they're feature requests, bug fixes, or documentation improvements.
