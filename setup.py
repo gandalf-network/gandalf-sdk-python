@@ -6,10 +6,15 @@ setup(
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[
-        'ariadne-codegen',
-        'click',
-        'requests',
-        'ecdsa',
+        'ariadne-codegen==0.13.0',
+        'click==8.1.7',
+        'ecdsa==0.19.0',
+        'httpx==0.27.0',
+        'pydantic==2.7.4',
+        'pydantic_core==2.18.4',
+        'requests==2.28.2',
+        'websockets==12.0',
+
     ],
     entry_points={
         'console_scripts': [
